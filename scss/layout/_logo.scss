@@ -1,0 +1,22 @@
+.logo {
+  @include size(40px);
+  display: block;
+
+  &__icon {
+    @include size(100%);
+    color: #1a1a1a;
+  }
+}
+
+// Desktop version.
+@media (min-width: $mobile) {
+  .logo {
+    &__icon {
+      transition: all 0.3s;
+      &:hover {
+        color: #fff;
+        transform: scale(1.1);
+      }
+    }
+  }
+}
